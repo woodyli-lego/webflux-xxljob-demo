@@ -1,0 +1,19 @@
+package com.example.webfluxxxljob;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
+
+import java.time.LocalDateTime;
+
+@Slf4j
+@RestController
+public class TestController {
+
+    @GetMapping("/ping")
+    public Mono<String> ping() {
+        log.info("accessing /ping at {}", LocalDateTime.now());
+        return Mono.just("pong");
+    }
+}

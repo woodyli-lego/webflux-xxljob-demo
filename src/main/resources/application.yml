@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: webflux-xxljob
+xxl:
+  job:
+    admin:
+      addresses: http://localhost:8000/xxl-job-admin
+    accessToken:
+    executor:
+      appname: ${spring.application.name}
+      address:
+      ip:
+      port: -1
+      logpath: /tmp/xxl_log
+      logretentiondays: 30
