@@ -16,4 +16,4 @@ http://localhost:8000/xxl-job-admin
 
 ## 测试
 
-启动 `WebfluxxxljobApplication`。
+启动项目，在 myTestJob 执行期间，访问 `GET /ping`，可以访问，说明 xxl-job 并没有 block event loop。
